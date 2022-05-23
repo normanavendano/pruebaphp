@@ -1,5 +1,9 @@
 <?php
-session_start();
+$uri="webserviceprueba";
+$servidor = new SoapServer(null,array('uri'=>$uri));
+$servidor->addFunction("login");
+$servidor->handle();
+
 function login( $email,$password){
     $session  = isset($_SESSION['nombreuser'])?$_SESSION['nombreuser']:'';
     $userdata = [
