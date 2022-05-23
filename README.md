@@ -22,3 +22,8 @@ URL:
         Recibe y gestiona validacion de datos para login enviando sus respectivas respuestas
     logout.php
         Cierra sesion destruyendo las variables de sesion validadas
+
+
+$url = "login_service.php";
+$uri = "/webserviceprueba";
+$cliente = new SoapClient(null, array('location' => $url, 'uri' => $uri));
